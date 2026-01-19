@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web | Kevin Campos</title>
+    <link rel="icon" href="cv.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Fondo de partículas -->
+    <div id="particles-bg"></div>
+    
+    <!-- Fondo con gradiente sutil para la sección Hero -->
+    <div class="hero-gradient-bg"></div>
+    
+    <!-- Menú de navegación actualizado -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>KRDGZ</span>
+            </div>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#acerca"><i class="fas fa-info-circle"></i> Acerca</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#perfil"><i class="fas fa-user"></i> Perfil</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#experiencia"><i class="fas fa-briefcase"></i> Experiencia</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#habilidades"><i class="fas fa-cogs"></i> Habilidades</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#educacion"><i class="fas fa-graduation-cap"></i> Educación</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#documentacion"><i class="fas fa-folder-open"></i> Documentos</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#footer-conecta"><i class="fas fa-handshake"></i> Contacto</a>
+                </div>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <!-- Botón de menú móvil
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>-->
+        </div>
+    </nav>
+
+    <!-- Sección Principal / Hero con estructura optimizada -->
+    <section class="hero-section" id="inicio">
+        <div class="container">
+            <div class="hero-content-centered">
+                <!-- Contenedor principal con efecto visual -->
+                <div class="hero-container">
+                    <!-- Foto centrada arriba -->
+                    <div class="hero-top">
+                        <div class="photo-container-centered">
+                            <div class="photo-frame">
+                                <img src="foto.png" alt="Kevin Campos" class="profile-photo" id="profilePhoto"
+                                     onerror='this.onerror=null; this.src="data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"400\"><defs><linearGradient id=\"grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"%2300a8ff\"/><stop offset=\"100%\" stop-color=\"%230097e6\"/></linearGradient></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23grad)\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial, sans-serif\" font-size=\"48\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\">KC</text></svg>"'>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Información debajo de la foto -->
+                    <div class="hero-bottom">
+                        <div class="hero-text-centered">
+                            <!-- NOMBRE EN UNA SOLA LÍNEA -->
+                            <h1 class="name-centered">
+                                <span class="name-full">KEVIN ALEXANDER CAMPOS RODRÍGUEZ</span>
+                            </h1>
+                            
+                            <h2 class="title-centered">
+                                <i class="fas fa-terminal"></i>
+                                INGENIERO EN SISTEMAS Y REDES INFORMÁTICAS
+                            </h2>
+                            
+                            <div class="tags-container-centered">
+                                <span class="tag"><i class="fas fa-users-cog"></i> Liderazgo</span>
+                                <span class="tag"><i class="fas fa-laptop-code"></i> Informático</span>
+                                <span class="tag"><i class="fas fa-desktop"></i> Monitoreo</span>
+                                <span class="tag"><i class="fas fa-tools"></i> Soporte Técnico</span>
+                                <span class="tag"><i class="fas fa-folder-open"></i> Gestión Administrativa y Documental</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de mí -->
+    <section class="section about-section" id="acerca">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-info-circle"></i>
+                ACERCA DE MÍ
+            </h2>
+            
+            <div class="about-card">
+                <div class="about-content">
+                    <p class="about-text">
+                        Me considero una persona autodidacta, proactiva y motivada, con una actitud de aprendizaje continuo con el propósito de fortalecer mis habilidades y conocimientos. Me destaco por mi sentido de responsabilidad, adaptabilidad, capacidad de trabajo en equipo, comunicación efectiva y compromiso con aportar valor en el entorno laboral. Enfocado en el crecimiento profesional, la mejora constante y el desarrollo tanto personal como laboral.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>Aprendizaje Continuo:</strong> Siempre en búsqueda de nuevas oportunidades para fortalecer habilidades y conocimientos</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Trabajo en Equipo:</strong> Excelente capacidad de colaboración y comunicación efectiva</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-bullseye"></i>
+                            <span><strong>Enfoque en Resultados:</strong> Comprometido con aportar valor en el entorno laboral</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>Crecimiento Profesional:</strong> Orientado al desarrollo personal y laboral constante</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Enfocado en el crecimiento profesional, la mejora constante y el desarrollo tanto personal como laboral"</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Perfil Profesional -->
+    <section class="section profile-section" id="perfil">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-user-circle"></i>
+                PERFIL PROFESIONAL
+            </h2>
+            
+            <div class="profile-card">
+                <p class="profile-description">
+                    Profesional en <span class="highlight">Ingeniería en Sistemas</span> con experiencia técnica en roles de soporte informático, monitoreo, atención al cliente y administración. Competencias en <span class="highlight">gestión administrativa integral</span> desarrolladas en sectores de salud, servicios digitales y seguridad electrónica, con responsabilidades clave en: control de recursos, administración de inventarios, supervisión de equipo de trabajo, capacitación de personal, coordinación multinivel y elaboración de informes formales con garantía del cumplimiento normativo. Especializado en implementar estructuras administrativas eficientes basadas en conocimiento técnico, optimizando procesos de organización, operación y documentación.
+                </p>
+                
+                <div class="profile-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Control de recursos y administración de inventarios</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Supervisión de equipo de trabajo y capacitación de personal</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Coordinación multinivel y elaboración de informes formales</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cumplimiento normativo y protección de datos</span>
+                    </div>
+                </div>
+                
+                <p class="profile-mission">
+                    Orientado al <span class="highlight">aprendizaje continuo</span> y mejora constante, con compromiso en aportar valor al entorno laboral mediante adaptabilidad y trabajo colaborativo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencia Laboral -->
+    <section class="section experience-section" id="experiencia">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                EXPERIENCIA LABORAL
+            </h2>
+            
+            <!-- Timeline de experiencias -->
+            <div class="timeline">
+                <!-- Experiencia 1 - SEAC -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="company-info">
+                                    <div class="company-logo">
+                                        <img src="seac.png" alt="SEAC" 
+                                             onerror='this.onerror=null; this.src="data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\"><rect width=\"100%\" height=\"100%\" fill=\"%2300a8ff\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"20\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\">SEAC</text></svg>"'>
+                                    </div>
+                                    <div class="company-details">
+                                        <h3 class="company-name">SEAC</h3>
+                                        <p class="company-location">San Miguel, El Salvador</p>
+                                    </div>
+                                </div>
+                                <span class="exp-period">2024 - Presente</span>
+                            </div>
+                            
+                            <div class="exp-positions">
+                                <div class="position">
+                                    <h4 class="position-title">Jefe de Grupo - Operador de Monitoreo y Gestión Documental</h4>
+                                    <span class="position-date">Enero 2025 - Presente</span>
+                                    <ul class="position-duties">
+                                        <li>Asignado como Jefe de Grupo por desempeño destacado, asumiendo liderazgo de equipo, coordinación estratégica, gestión de reportes y documentos</li>
+                                        <li>Liderazgo y capacitación de nuevos operadores en sistemas de monitoreo y protocolos de seguridad</li>
+                                        <li>Coordinación estratégica con equipos de jefaturas superiores, gerencia, seguridad interna, supervisores y personal administrativo</li>
+                                        <li>Elaboración de informes detallados sobre incidencias, desempeño del sistema y tendencias de seguridad</li>
+                                        <li>Garantía del cumplimiento de protocolos operativos y estándares de seguridad</li>
+                                        <li>Supervisión de sistemas de videovigilancia (CCTV) y alarmas de seguridad</li>
+                                        <li>Control integral de accesos y protocolos de seguridad en residenciales</li>
+                                        <li>Diagnóstico y reporte de fallas técnicas, coordinando acciones correctivas con soporte técnico</li>
+                                        <li>Identificación y reporte inmediato de actividades sospechosas o eventos de riesgo</li>
+                                        <li>Aplicación y promoción del cumplimiento de normas y políticas internas de seguridad</li>
+                                        <li>Resguardo de información confidencial según normativas de privacidad y protección de datos</li>
+                                        <li>Atención a consultas y coordinación de respuestas ante incidentes de seguridad</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="position">
+                                    <h4 class="position-title">Operador de Monitoreo</h4>
+                                    <span class="position-date">Noviembre 2024 - Diciembre 2024</span>
+                                    <ul class="position-duties">
+                                        <li>Reconocido por desempeño excepcional, siendo asignado como Jefe de Grupo en enero 2025</li>
+                                        <li>Supervisión en tiempo real de sistemas de videovigilancia (CCTV) y alarmas de seguridad</li>
+                                        <li>Identificación y reporte de actividades sospechosas o eventos de riesgo</li>
+                                        <li>Control de accesos y vigilancia de entradas/salidas de personal, visitantes y vehículos</li>
+                                        <li>Diagnóstico y reporte de fallas técnicas en equipos de seguridad</li>
+                                        <li>Revisión y análisis de grabaciones para investigaciones internas</li>
+                                        <li>Operación y mantenimiento básico de software especializado de monitoreo</li>
+                                        <li>Verificación periódica del funcionamiento de equipos y sistemas de alarma</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 2 - CyberMate -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="company-info">
+                                    <div class="company-logo">
+                                        <img src="cyber.png" alt="CyberMate"
+                                             onerror='this.onerror=null; this.src="data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\"><rect width=\"100%\" height=\"100%\" fill=\"%23ff6b6b\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\">Cyber</text></svg>"'>
+                                    </div>
+                                    <div class="company-details">
+                                        <h3 class="company-name">CyberMate</h3>
+                                        <p class="company-location">Ciudad Pacífica, San Miguel</p>
+                                    </div>
+                                </div>
+                                <span class="exp-period">2024</span>
+                            </div>
+                            
+                            <div class="exp-positions">
+                                <div class="position">
+                                    <h4 class="position-title">Encargado de Local - Administración y Atención al Cliente</h4>
+                                    <span class="position-date">Marzo 2024 - Octubre 2024</span>
+                                    <ul class="position-duties">
+                                        <li>Administración integral de establecimiento de servicios digitales (impresiones, fotocopias, escaneos)</li>
+                                        <li>Desarrollo de estrategias para mejorar experiencia del cliente y optimizar servicio</li>
+                                        <li>Implementación de iniciativas de fidelización y retención de usuarios</li>
+                                        <li>Administración de inventario de suministros (papel, tinta, accesorios tecnológicos)</li>
+                                        <li>Gestión de cobros y control de tiempo de uso de equipos tecnológicos</li>
+                                        <li>Atención al cliente y asistencia técnica en uso de computadoras, impresoras y dispositivos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 3 - Hospital -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="company-info">
+                                    <div class="company-logo">
+                                        <img src="minsal.png" alt="Hospital San Juan de Dios"
+                                             onerror='this.onerror=null; this.src="data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\"><rect width=\"100%\" height=\"100%\" fill=\"%2300d9a5\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"16\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\">HOSP</text></svg>"'>
+                                    </div>
+                                    <div class="company-details">
+                                        <h3 class="company-name">Hospital Nacional San Juan de Dios</h3>
+                                        <p class="company-location">San Miguel, El Salvador</p>
+                                    </div>
+                                </div>
+                                <span class="exp-period">2022</span>
+                            </div>
+                            
+                            <div class="exp-positions">
+                                <div class="position">
+                                    <h4 class="position-title">Soporte Técnico y Administrativo - Área de Informática Hospitalaria</h4>
+                                    <span class="position-date">Junio 2022 - Diciembre 2022</span>
+                                    <ul class="position-duties">
+                                        <li>Orientación en el uso del sistema SIS hospitalario</li>
+                                        <li>Implementación de proyecto de actualización de base de datos institucional del personal</li>
+                                        <li>Gestión de inventario de equipos y componentes de hardware</li>
+                                        <li>Soporte técnico especializado en equipos informáticos y hardware</li>
+                                        <li>Organización de registros en archivos Excel y sistema de archivo AMPO</li>
+                                        <li>Documentación de órdenes de trabajo y comprobantes contables</li>
+                                        <li>Pruebas en área de monitoreo sistema de cámaras en el área COVID</li>
+                                        <li>Mantenimiento de computadoras e instalación de puntos de red en diversas áreas hospitalarias</li>
+                                        <li>Toma de datos a personal hospitalario para actualización de información y fotografía de nuevo carné</li>
+                                        <li>Atención y orientación a personal hospitalario como guía de destino</li>
+                                        <li>Manejo de equipos informáticos y software Microsoft Office</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section class="section skills-section" id="habilidades">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-cogs"></i>
+                HABILIDADES
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Habilidades Blandas -->
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-users"></i>
+                        Habilidades Blandas
+                    </h3>
+                    <ul class="position-duties">
+                        <li>Liderazgo de Equipo</li>
+                        <li>Comunicación Efectiva</li>
+                        <li>Coordinación Multinivel</li>
+                        <li>Capacitación y Mentoría</li>
+                        <li>Resolución de Problemas</li>
+                        <li>Organización y Planificación</li>
+                        <li>Trabajo en Equipo y Colaboración</li>
+                        <li>Iniciativa y Proactividad</li>
+                        <li>Atención al Detalle</li>
+                        <li>Adaptabilidad</li>
+                        <li>Responsabilidad y Compromiso</li>
+                        <li>Orientación a la Mejora Continua</li>
+                    </ul>
+                </div>
+                
+                <!-- Habilidades Técnicas -->
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Habilidades Técnicas
+                    </h3>
+                    <ul class="position-duties">
+                        <li>Supervisión de Equipo de Trabajo</li>
+                        <li>Administración de Recursos e Inventarios</li>
+                        <li>Gestión Documental y Control de Archivos</li>
+                        <li>Microsoft Office (Word, Excel, PowerPoint, Outlook)</li>
+                        <li>Cumplimiento de Protocolos y Normativas</li>
+                        <li>Atención al Cliente y Servicio</li>
+                        <li>Control de Procesos Operativos</li>
+                        <li>Soporte Técnico de Hardware y Software</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Educación y Certificaciones -->
+    <section class="section education-section" id="educacion">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                EDUCACIÓN
+            </h2>
+            
+            <div class="education-grid">
+                <!-- Educación -->
+                <div class="education-card">
+                    <h3 class="education-title">
+                        <i class="fas fa-university"></i>
+                        Formación Académica
+                    </h3>
+                    
+                    <div class="education-item">
+                        <div class="edu-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="edu-content">
+                            <h4 class="edu-degree">Ingeniería en Sistemas y Redes Informáticas</h4>
+                            <p class="edu-institution">Universidad Gerardo Barrios</p>
+                            <span class="edu-period">2019 - 2024</span>
+                            <button class="btn-view-cert" data-cert="universidad">
+                                <i class="fas fa-eye"></i> Ver Título
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="edu-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="edu-content">
+                            <h4 class="edu-degree">Bachillerato</h4>
+                            <p class="edu-institution">Liceo San Miguel</p>
+                            <span class="edu-period">2017 - 2018</span>
+                            <button class="btn-view-cert" data-cert="bachiller">
+                                <i class="fas fa-eye"></i> Ver Título
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificaciones -->
+                <div class="certifications-card">
+                    <h3 class="certifications-title">
+                        <i class="fas fa-certificate"></i>
+                        Certificaciones Recientes
+                    </h3>
+                    
+                    <div class="certifications-grid">
+                        <div class="cert-item" data-cert="computacion">
+                            <div class="cert-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="cert-name">Curso Básico de Computadoras e Informática</h4>
+                                <p class="cert-issuer">Platzi</p>
+                                <span class="doc-link"> Ver Certificación <i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item" data-cert="liderazgo">
+                            <div class="cert-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="cert-name">Liderazgo y Dirección de Equipos</h4>
+                                <p class="cert-issuer">Platzi</p>
+                                <span class="doc-link"> Ver Certificación <i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item" data-cert="inteligencia">
+                            <div class="cert-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="cert-name">Inteligencia Emocional para Líderes</h4>
+                                <p class="cert-issuer">Platzi</p>
+                                <span class="doc-link"> Ver Certificación <i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item" data-cert="decisiones">
+                            <div class="cert-icon">
+                                <i class="fas fa-chess"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="cert-name">Toma de Decisiones Estratégicas</h4>
+                                <p class="cert-issuer">Platzi</p>
+                                <span class="doc-link"> Ver Certificación <i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item" data-cert="rh">
+                            <div class="cert-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="cert-name">Fundamentos de Recursos Humanos</h4>
+                                <p class="cert-issuer">Platzi</p>
+                                <span class="doc-link"> Ver Certificación <i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Documentación Oficial -->
+    <section class="section documents-section" id="documentacion">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-folder-open"></i>
+                TÍTULO, DIPLOMAS Y CERTIFICACIONES
+            </h2>
+            
+            <div class="documents-grid">
+                <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy83OTVmZGY4YTJiYWM4NzY3L0lnQ1ZORTNSQXpjR1RyN1VKUEF6bDdxbEFVT0k4cV83R1F6X3ZSVzkwM1BtR3FRP2U9bHRNUXBr&id=795FDF8A2BAC8767%21sd14d349537034e06bed424f03397baa5&cid=795FDF8A2BAC8767" 
+                   target="_blank" class="document-card">
+                    <div class="doc-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Registro de Título y Auténtica de Notas</h4>
+                        <p>Documentación de título y notas</p>
+                        <span class="doc-link">Ver en OneDrive <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                
+                <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy83OTVmZGY4YTJiYWM4NzY3L0lnQ0Rjc3ZkTUVLWVRwa3RuMUtxV090WUFTdlNGMGdLeHNxVjVUYmhTVkRfNXZFP2U9b3piUGhu&id=795FDF8A2BAC8767%21sddcb728342304e98992d9f52aa58eb58&cid=795FDF8A2BAC8767" 
+                   target="_blank" class="document-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Diplomas</h4>
+                        <p>Documentación de diplomas</p>
+                        <span class="doc-link">Ver en OneDrive <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+                <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy83OTVmZGY4YTJiYWM4NzY3L0lnQWxFcFhtZHpZblFxeXUwSE1RYnhBd0FaQzZnU3dTenhTSW1XRkdYaUdLMDRNP2U9UTdhSzNQ&id=795FDF8A2BAC8767%21se695122536774227acaed073106f1030&cid=795FDF8A2BAC8767" 
+                   target="_blank" class="document-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Certificaciones</h4>
+                        <p>Documentación de certificaciones</p>
+                        <span class="doc-link">Ver en OneDrive <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con formato de tarjeta ovalada -->
+    <footer class="footer" id="footer-conecta">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Tarjeta ovalada principal del footer -->
+                <div class="footer-card">
+                    <div class="footer-card-content">
+                        <!-- Primera fila: Contacto, Tecnologías 2026 y Actualización -->
+                        <div class="footer-info-row">
+                            <!-- Columna Contacto -->
+                            <div class="footer-info-col">
+                                <h3 class="footer-info-title">
+                                    <i class="fas fa-satellite"></i> 
+                                    Conecta conmigo
+                                </h3>
+                                
+                                <div class="footer-social-icons">
+                                    <a href="https://www.facebook.com/kevin.camposrodriguez.14" target="_blank" class="footer-social-icon">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://wa.me/50375610996" target="_blank" class="footer-social-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="mailto:krdgz010@gmail.com" class="footer-social-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Columna Tecnologías 2026 -->
+                            <div class="footer-info-col">
+                                <h3 class="footer-info-title">
+                                    <i class="fas fa-microchip"></i>
+                                    Tecnologías 2026
+                                </h3>
+                                <div class="footer-tech-list">
+                                    <div class="tech-item">
+                                        <i class="fas fa-robot"></i>
+                                        IA Generativa
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-cloud"></i>
+                                        Cloud Computing
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-link"></i>
+                                        Blockchain
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-wifi"></i>
+                                        IoT
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-vr-cardboard"></i>
+                                        Realidad Aumentada
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Columna Actualización -->
+                            <div class="footer-info-col">
+                                <h3 class="footer-info-title">
+                                    <i class="fas fa-info-circle"></i>
+                                    Información
+                                </h3>
+                                <div class="update-info">
+                                    <div class="update-item">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <div class="update-details">
+                                            <span class="update-label">Última actualización:</span>
+                                            <span class="update-value" id="footerUpdateDate">Enero 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="update-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div class="update-details">
+                                            <span class="update-label">Hora local:</span>
+                                            <span class="update-value" id="footerCurrentTime">08:48:11</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Separador decorativo -->
+                        <div class="footer-divider"></div>
+                        
+                        <!-- Segunda fila: Copyright y Tecnologías Web (REORGANIZADA) -->
+                        <div class="footer-bottom-section">
+                            <!-- Copyright arriba -->
+                            <div class="copyright-section">
+                                <p class="copyright-text">© 2026 Kevin Alexander Campos Rodríguez | Sitio Web Tecnológico v2.0</p>
+                            </div>
+                            
+                            <!-- Tecnologías Web debajo -->
+                            <div class="footer-tech-stack">
+                                <span class="tech-stack-item">
+                                    <i class="fab fa-html5"></i>
+                                    HTML5
+                                </span>
+                                <span class="tech-stack-item">
+                                    <i class="fab fa-css3-alt"></i>
+                                    CSS3
+                                </span>
+                                <span class="tech-stack-item">
+                                    <i class="fab fa-js"></i>
+                                    JavaScript
+                                </span>
+                                <span class="tech-stack-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Responsive
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para certificaciones -->
+    <div class="modal" id="certModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <img id="certImage" src="" alt="Certificación" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
