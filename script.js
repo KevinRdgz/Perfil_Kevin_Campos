@@ -1,6 +1,6 @@
 // ===== INICIALIZACIÓN AL CARGAR LA PÁGINA =====
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 CV Profesional - Kevin Campos - Versión Optimizada');
+    console.log('🚀 Sitio Web - Kevin Campos - Versión Optimizada');
     
     // Inicializar todos los componentes
     initTheme();
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavScroll();
     
     // Inicializar animaciones después de un breve retardo
-    setTimeout(initAnimations, 500);
+    setTimeout(initAnimations, 300);
     
     console.log('✅ Todos los componentes inicializados correctamente');
 });
@@ -93,10 +93,10 @@ function initParticles() {
         particlesJS('particles-bg', {
             particles: {
                 number: {
-                    value: 60,
+                    value: 50, // Reducido para mejor rendimiento
                     density: {
                         enable: true,
-                        value_area: 1000
+                        value_area: 800 // Reducido para mejor rendimiento
                     }
                 },
                 color: {
@@ -110,35 +110,35 @@ function initParticles() {
                     }
                 },
                 opacity: {
-                    value: 0.3,
+                    value: 0.25, // Reducido para mejor visibilidad
                     random: true,
                     anim: {
                         enable: true,
-                        speed: 1,
+                        speed: 0.8, // Reducido para mejor rendimiento
                         opacity_min: 0.1,
                         sync: false
                     }
                 },
                 size: {
-                    value: 3,
+                    value: 2.5, // Reducido ligeramente
                     random: true,
                     anim: {
                         enable: true,
-                        speed: 2,
+                        speed: 1.5, // Reducido para mejor rendimiento
                         size_min: 1,
                         sync: false
                     }
                 },
                 line_linked: {
                     enable: true,
-                    distance: 120,
+                    distance: 100, // Reducido para mejor rendimiento
                     color: "#00a8ff",
-                    opacity: 0.2,
+                    opacity: 0.15, // Reducido para mejor visibilidad
                     width: 1
                 },
                 move: {
                     enable: true,
-                    speed: 1.5,
+                    speed: 1, // Reducido para mejor rendimiento
                     direction: "none",
                     random: true,
                     straight: false,
@@ -166,20 +166,20 @@ function initParticles() {
                 },
                 modes: {
                     grab: {
-                        distance: 140,
+                        distance: 120, // Reducido para mejor rendimiento
                         line_linked: {
-                            opacity: 0.4
+                            opacity: 0.3 // Reducido
                         }
                     },
                     push: {
-                        particles_nb: 4
+                        particles_nb: 3 // Reducido
                     }
                 }
             },
             retina_detect: true
         });
         
-        console.log('✨ Sistema de partículas mejorado inicializado');
+        console.log('✨ Sistema de partículas optimizado inicializado');
     }
 }
 
@@ -187,55 +187,20 @@ function initParticles() {
 function initNavScroll() {
     const navBar = document.querySelector('.nav-bar');
     
+    if (!navBar) return;
+    
+    let scrollTimeout;
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navBar.classList.add('scrolled');
-        } else {
-            navBar.classList.remove('scrolled');
-        }
-    });
-}
-
-// ===== MENÚ MÓVIL MEJORADO =====
-function initMobileMenu() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-            
-            // Efecto de animación
-            this.style.transform = 'scale(0.9)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-        });
-        
-        // Cerrar menú al hacer clic en un enlace (en móviles)
-        const navItems = navLinks.querySelectorAll('a');
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
-        });
-        
-        // Cerrar menú al redimensionar a pantalla grande
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('active');
-                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        // Usar debounce para mejor rendimiento
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            if (window.scrollY > 50) {
+                navBar.classList.add('scrolled');
+            } else {
+                navBar.classList.remove('scrolled');
             }
-        });
-    }
-    
-    console.log('📱 Menú móvil mejorado configurado');
+        }, 10);
+    });
 }
 
 // ===== GESTIÓN DE LA FOTO DE PERFIL CON EFECTOS =====
@@ -244,21 +209,26 @@ function initPhoto() {
     
     if (!profilePhoto) return;
     
-    // Cuando la imagen cargue, mostrar con efecto
-    profilePhoto.onload = function() {
+    // Precargar la imagen
+    const img = new Image();
+    img.src = profilePhoto.src;
+    
+    img.onload = function() {
         profilePhoto.style.opacity = '0';
-        profilePhoto.style.transform = 'scale(0.9)';
+        profilePhoto.style.transform = 'scale(0.95)';
         
         setTimeout(() => {
-            profilePhoto.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            profilePhoto.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             profilePhoto.style.opacity = '1';
             profilePhoto.style.transform = 'scale(1)';
-        }, 100);
+        }, 50);
     };
     
     // Manejar errores de carga
     profilePhoto.onerror = function() {
-        console.log('❌ Error al cargar la foto, usando placeholder');
+        console.log('ℹ️ Usando placeholder para la foto de perfil');
+        this.style.opacity = '1';
+        this.style.transform = 'scale(1)';
     };
 }
 
@@ -273,7 +243,7 @@ function initScroll() {
     // Menú activo al hacer scroll
     initActiveMenu();
     
-    console.log('🔧 Navegación suave mejorada configurada');
+    console.log('🔧 Navegación suave configurada');
 }
 
 function createScrollTopButton() {
@@ -282,15 +252,15 @@ function createScrollTopButton() {
     scrollTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
     scrollTopBtn.style.cssText = `
         position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
+        bottom: 25px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
         background: linear-gradient(135deg, #00a8ff, #0097e6);
         border: none;
         border-radius: 50%;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         cursor: pointer;
         z-index: 999;
         opacity: 0;
@@ -299,23 +269,27 @@ function createScrollTopButton() {
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+        box-shadow: 0 4px 12px rgba(0, 168, 255, 0.3);
         transform: translateY(20px);
     `;
     
     document.body.appendChild(scrollTopBtn);
     
     // Mostrar/ocultar botón al hacer scroll
+    let scrollTimeout;
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            scrollTopBtn.style.opacity = '1';
-            scrollTopBtn.style.visibility = 'visible';
-            scrollTopBtn.style.transform = 'translateY(0)';
-        } else {
-            scrollTopBtn.style.opacity = '0';
-            scrollTopBtn.style.visibility = 'hidden';
-            scrollTopBtn.style.transform = 'translateY(20px)';
-        }
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+                scrollTopBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+                scrollTopBtn.style.transform = 'translateY(20px)';
+            }
+        }, 10);
     });
     
     // Evento click para volver arriba
@@ -344,7 +318,7 @@ function initSmoothScroll() {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerHeight = document.querySelector('.nav-bar').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                const targetPosition = targetElement.offsetTop - headerHeight - 10; // Reducido de 20 a 10
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -365,25 +339,31 @@ function initActiveMenu() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     
+    if (sections.length === 0 || navLinks.length === 0) return;
+    
+    let scrollTimeout;
     window.addEventListener('scroll', function() {
-        let current = '';
-        const scrollPosition = window.scrollY + 100;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            let current = '';
+            const scrollPosition = window.scrollY + 80; // Reducido de 100 a 80
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }, 10);
     });
 }
 
@@ -398,10 +378,7 @@ function initEvents() {
     // Efectos en elementos interactivos
     initInteractiveEffects();
     
-    // Menú móvil mejorado
-    initMobileMenu();
-    
-    console.log('🎯 Eventos y efectos mejorados configurados');
+    console.log('🎯 Eventos y efectos configurados');
 }
 
 function initCertModal() {
@@ -409,15 +386,15 @@ function initCertModal() {
     const closeModalBtn = document.getElementById('closeModal');
     const certButtons = document.querySelectorAll('.btn-view-cert, .cert-item');
     
+    if (!certModal || !closeModalBtn) return;
+    
     // Mapeo de certificaciones a imágenes
     const certImages = {
-        'scrum': 'scrum.png',
-        'ccna': 'ccna.jpg',
+        'computacion': 'computacion.jpg',
         'liderazgo': 'liderazgo.jpg',
-        'rh': 'rh.jpg',
         'inteligencia': 'inteligencia.jpg',
         'decisiones': 'decisiones.jpg',
-        'computacion': 'computacion.jpg',
+        'rh': 'rh.jpg',
         'universidad': 'universidad.jpg',
         'bachiller': 'bachiller.jpg'
     };
@@ -435,24 +412,25 @@ function initCertModal() {
                 document.body.style.overflow = 'hidden';
                 
                 // Efecto de entrada para el modal
-                certModal.querySelector('.modal-content').style.opacity = '0';
-                certModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(0.9)';
+                const modalContent = certModal.querySelector('.modal-content');
+                modalContent.style.opacity = '0';
+                modalContent.style.transform = 'translate(-50%, -50%) scale(0.95)';
                 
                 setTimeout(() => {
-                    certModal.querySelector('.modal-content').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    certModal.querySelector('.modal-content').style.opacity = '1';
-                    certModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(1)';
+                    modalContent.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+                    modalContent.style.opacity = '1';
+                    modalContent.style.transform = 'translate(-50%, -50%) scale(1)';
                 }, 10);
+            } else {
+                console.log(`⚠️ Imagen no encontrada para certificación: ${certId}`);
             }
         });
     });
     
     // Cerrar modal
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', function() {
-            closeModal();
-        });
-    }
+    closeModalBtn.addEventListener('click', function() {
+        closeModal();
+    });
     
     // Cerrar modal al hacer clic fuera
     const modalOverlay = certModal.querySelector('.modal-overlay');
@@ -472,14 +450,14 @@ function initCertModal() {
     function closeModal() {
         const modalContent = certModal.querySelector('.modal-content');
         modalContent.style.opacity = '0';
-        modalContent.style.transform = 'translate(-50%, -50%) scale(0.9)';
+        modalContent.style.transform = 'translate(-50%, -50%) scale(0.95)';
         
         setTimeout(() => {
             certModal.style.display = 'none';
             document.body.style.overflow = 'auto';
             modalContent.style.opacity = '';
             modalContent.style.transform = '';
-        }, 300);
+        }, 250);
     }
 }
 
@@ -488,13 +466,13 @@ function initCardHoverEffects() {
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px)';
-            this.style.boxShadow = '0 20px 40px rgba(0, 168, 255, 0.15)';
+            this.style.transform = 'translateY(-6px)';
+            this.style.boxShadow = '0 15px 30px rgba(0, 168, 255, 0.12)';
         });
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '0 5px 15px rgba(0, 168, 255, 0.1)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 168, 255, 0.08)';
         });
     });
 }
@@ -504,7 +482,7 @@ function initInteractiveEffects() {
     const buttons = document.querySelectorAll('button:not(.theme-toggle):not(.modal-close):not(.mobile-menu-toggle)');
     buttons.forEach(button => {
         button.addEventListener('mousedown', function() {
-            this.style.transform = 'scale(0.95)';
+            this.style.transform = 'scale(0.96)';
         });
         
         button.addEventListener('mouseup', function() {
@@ -520,7 +498,7 @@ function initInteractiveEffects() {
     const links = document.querySelectorAll('a:not(.nav-links a):not(.footer-social-icon):not(.document-card)');
     links.forEach(link => {
         link.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px)';
+            this.style.transform = 'translateY(-1px)';
         });
         
         link.addEventListener('mouseleave', function() {
@@ -534,7 +512,7 @@ function initInteractiveEffects() {
         tag.addEventListener('mouseenter', function() {
             const icon = this.querySelector('i');
             if (icon) {
-                icon.style.transform = 'rotate(15deg) scale(1.2)';
+                icon.style.transform = 'rotate(12deg) scale(1.15)';
             }
         });
         
@@ -558,7 +536,8 @@ function initFooterTime() {
             const timeString = now.toLocaleTimeString('es-ES', {
                 hour: '2-digit',
                 minute: '2-digit',
-                second: '2-digit'
+                second: '2-digit',
+                hour12: false
             });
             footerTimeElement.textContent = timeString;
         }
@@ -569,8 +548,8 @@ function initFooterTime() {
     }
     
     if (footerDateElement) {
-        // Mostrar "Enero 2026" como última actualización
-        footerDateElement.textContent = `Enero 2026`;
+        // Mostrar "Marzo 2026" como última actualización
+        footerDateElement.textContent = `Marzo 2026`;
     }
 }
 
@@ -589,7 +568,7 @@ function initAnimations() {
                         setTimeout(() => {
                             item.style.opacity = '1';
                             item.style.transform = 'translateY(0)';
-                        }, index * 50);
+                        }, index * 30); // Reducido de 50ms a 30ms
                     });
                 }
                 
@@ -597,8 +576,8 @@ function initAnimations() {
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.08, // Reducido de 0.1 a 0.08
+        rootMargin: '0px 0px -40px 0px' // Reducido de -50px a -40px
     });
     
     // Observar elementos para animar
@@ -608,16 +587,16 @@ function initAnimations() {
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        el.style.transform = 'translateY(25px)'; // Reducido de 30px a 25px
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; // Reducido de 0.8s a 0.6s
         observer.observe(el);
         
         // Preparar elementos hijos para animación escalonada
         const listItems = el.querySelectorAll('li, .highlight-item, .position, .education-item, .cert-item');
         listItems.forEach(item => {
             item.style.opacity = '0';
-            item.style.transform = 'translateY(10px)';
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            item.style.transform = 'translateY(8px)'; // Reducido de 10px a 8px
+            item.style.transition = 'opacity 0.4s ease, transform 0.4s ease'; // Reducido de 0.5s a 0.4s
         });
     });
     
@@ -628,7 +607,24 @@ function initAnimations() {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
         });
-    }, 300);
+    }, 200); // Reducido de 300ms a 200ms
 }
 
-console.log('🎉 CV completamente cargado y optimizado para máxima experiencia visual!');
+// ===== OPTIMIZACIÓN PARA MÓVILES =====
+function initMobileOptimizations() {
+    // Detectar si es móvil
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // Reducir animaciones en móviles
+        document.documentElement.style.setProperty('--animation-speed', '0.5s');
+        
+        // Mejorar rendimiento táctil
+        document.body.style.webkitTapHighlightColor = 'rgba(0, 168, 255, 0.1)';
+    }
+}
+
+// Inicializar optimizaciones para móviles
+initMobileOptimizations();
+
+console.log('🎉 Sitio web completamente cargado y optimizado!');
